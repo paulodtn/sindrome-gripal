@@ -35,7 +35,7 @@ csv.to_csv(f"csv/datasus_sindromegripal_{timestamp}.csv", index=False, sep=",")
 # Gráfico de barras empilhadas
 df_estados = csv[["estado"]]
 counts = df_estados.value_counts()
-fig, ax = plt.subplots(figsize=(15, 6))
+fig, ax = plt.subplots(figsize=(13, 18))
 
 counts.plot.bar(stacked=True, ax=ax, width=0.8, edgecolor="white", linewidth=0.5)
 
@@ -44,7 +44,7 @@ ax.set_xlabel("Unidades da Federação")
 ax.set_ylabel("Frequência de casos")
 
 for p in ax.containers:
-    ax.bar_label(p, label_type="edge", fontsize=8)
+    ax.bar_label(p, label_type="edge", fontsize=12)
 
 ax.grid(color="lightgrey", linestyle="-", linewidth=0.5)
 ax.spines["bottom"].set_color("white")
@@ -63,10 +63,10 @@ plt.savefig(f"imagens/ocorrencia_por_UF_{timestamp}.png", dpi=300)
 csv_filtrado = csv[["has_numbers", "estado"]]
 counts = csv_filtrado.groupby("estado")["has_numbers"].value_counts().unstack()
 
-ax = counts.plot.bar(figsize=(15, 10), width=0.8)
+ax = counts.plot.bar(figsize=(18, 16), width=0.8)
 
 for p in ax.containers:
-    ax.bar_label(p, label_type="edge", fontsize=8)
+    ax.bar_label(p, label_type="edge", fontsize=12)
 
 ax.grid(color="lightgrey", linestyle="solid", linewidth=0.5)
 ax.spines["bottom"].set_color("white")
@@ -79,8 +79,7 @@ ax.set_title(
 )
 ax.set_xlabel("Estado")
 ax.set_ylabel("Frequência")
-ax.legend(labels=["Não-vacinados", "Vacinados"])
-
+plt.legend(["Não-vacinados", "Vacinados"], loc='upper left')
 
 plt.savefig(f"imagens/ocorrencia_vacinados_por_UF_{timestamp}.png", dpi=300)
 
@@ -99,7 +98,7 @@ faixas_etarias = pd.cut(
 
 counts = pd.crosstab(faixas_etarias, df_sintomas["sintomatico"])
 
-ax = counts.plot.barh(width=0.8, figsize=(7, 12))
+ax = counts.plot.barh(width=0.8, figsize=(7, 9))
 for i in ax.containers:
     ax.bar_label(i, label_type="edge", fontsize=10)
 
@@ -150,7 +149,7 @@ locator = mdates.MonthLocator(interval=3)
 
 ax.xaxis.set_major_locator(locator)
 
-ax = pivot_table.T.plot(kind="line", figsize=(20, 10))
+ax = pivot_table.T.plot(kind="line", figsize=(15, 10))
 ax.legend(loc="lower center", ncol=3)
 ax.set_xlabel("Mês/Ano")
 ax.set_ylabel("Número de casos")
@@ -218,5 +217,6 @@ ax.set_ylabel("Frequência")
 for i, v in enumerate(sintomas_freq_por_paciente.values):
     ax.annotate(str(v), xy=(i, v), ha="center", va="bottom")
 
+plt.xticks(rotation=45, ha="right")
 
 plt.savefig(f"imagens/frequencia_sintomas_{timestamp}.png", dpi=300)
