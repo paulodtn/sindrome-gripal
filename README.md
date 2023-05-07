@@ -12,6 +12,8 @@ visualização para acompanhar a evolução dos casos ao longo do
 período amostrado.
 ● Entre os pacientes sintomáticos, qual o sintoma mais frequente?
 
+![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/evolucao_ne_07-05-2023_13-27-05.png)
+
 ## Metodologia
 
 Para completar esta tarefa, foram utilizadas as bibliotecas requests, json, pandas, XXX, YYYY, ZZZ nas seguintes versões
