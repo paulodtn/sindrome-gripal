@@ -22,6 +22,7 @@ Para completar esta tarefa, foram utilizadas as bibliotecas requests, json, pand
 |requests|vXXX|
 
 ## Gráfico de Número de Casos por Estado
+![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_UF_07-05-2023_14-17-01.png)
 
 A partir dos dados referentes ao número de casos de síndrome gripal por estado, podemos fazer a seguinte análise:
 
@@ -33,9 +34,9 @@ A partir dos dados referentes ao número de casos de síndrome gripal por estado
 
 Esses dados podem refletir diferentes fatores, como a densidade populacional, o clima, a circulação de vírus, as medidas de prevenção e controle, entre outros.
 
-![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_UF_07-05-2023_13-27-05.png)
-
 ## Gráfico de Casos em que o Paciente Tomou ao menos 1 Dose da Vacina
+
+![questao2](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_vacinados_por_UF_07-05-2023_14-17-01.png)
 
 Os dados mostram que, dos 10000 casos de síndrome gripal registrados, **6699 (66,99%)** tomaram ao menos uma dose de vacina (**vacinados**), enquanto **3301 (33,01%)** não tomaram nenhuma dose (**não vacinados**). Isso significa que a maioria dos casos ocorreu em pessoas que se vacinaram parcial ou totalmente. Isso pode indicar que:
 
@@ -49,6 +50,8 @@ Para confirmar essas hipóteses, seria necessário realizar mais estudos e anál
 
 ## Gráfico de Pacientes Sintomáticos e Assintomáticos por Faixa Etária
 
+![questao3](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_idade_vacina_07-05-2023_14-17-01.png)
+
 Uma possível análise dos dados referentes ao número de casos de síndrome gripal é a seguinte:
 
 - O número total de casos **sintomáticos** é maior do que o de **assintomáticos** em todas as faixas etárias, o que indica que a doença tem uma alta taxa de manifestação clínica.
@@ -56,8 +59,16 @@ Uma possível análise dos dados referentes ao número de casos de síndrome gri
 - A faixa etária com menor número absoluto de casos sintomáticos é a de **90 a 100 anos**, seguida pela de **80 a 90 anos**. Isso pode indicar que esses grupos são mais protegidos ou que têm uma maior letalidade.
 - O gráfico de barras empilhadas permite visualizar a proporção relativa de casos sintomáticos e assintomáticos em cada faixa etária. Observa-se que essa proporção varia pouco entre as faixas, exceto pela de **90 a 100 anos**, que tem uma maior porcentagem de casos assintomáticos.
 
+## Gráfico de seguimento por estado do Nordeste
+
+Aqui pode-se visualizar a frequência de casos por tempo nos estados do Nordeste: Alagoas, Sergipe, Maranhão, Bahia, Pernambuco, Ceará, Piauí, Paraíba, Rio Grande do Norte.
+
+![questao4](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/evolucao_ne_07-05-2023_14-17-01.png)
+
+
 ## Gráfico da Frequência de Sintomas por Paciente
 
-![Gráfico de colunas](grafico.png)
+![questao5](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/frequencia_sintomas_07-05-2023_14-17-01.png)
+
 
 De acordo com o gráfico, o sintoma mais frequente entre os pacientes com síndrome gripal é a tosse, com 5130 casos, seguido por coriza, com 3838 casos. O sintoma menos frequente é a alteração do olfato, com 289 casos. O gráfico também mostra que 2144 pacientes não apresentaram nenhum sintoma, ou seja, foram assintomáticos.
