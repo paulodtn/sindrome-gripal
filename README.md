@@ -68,7 +68,12 @@ Aqui pode-se visualizar a frequência de casos por tempo nos estados do Nordeste
 
 ## Gráfico da Frequência de Sintomas por Paciente
 
+De acordo com o gráfico, o sintoma mais frequente entre os pacientes com síndrome gripal é a tosse, com 5130 casos, seguido por coriza, com 3838 casos. O sintoma menos frequente é a alteração do olfato, com 289 casos. O gráfico também mostra que 2144 pacientes não apresentaram nenhum sintoma, ou seja, foram assintomáticos.
+
 ![questao5](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/frequencia_sintomas_07-05-2023_14-17-01.png)
 
+## Conclusões
 
-De acordo com o gráfico, o sintoma mais frequente entre os pacientes com síndrome gripal é a tosse, com 5130 casos, seguido por coriza, com 3838 casos. O sintoma menos frequente é a alteração do olfato, com 289 casos. O gráfico também mostra que 2144 pacientes não apresentaram nenhum sintoma, ou seja, foram assintomáticos.
+Os dados presentes no OpenSUS são uma excelente forma de obter insights sobre a saúde pública de diversos pontos do Brasil, e dessa forma tomar providências eficazes em prol de sua manutenção. 
+
+
