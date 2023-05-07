@@ -27,24 +27,30 @@ csv["has_numbers"] = csv["codigoDosesVacina"].apply(lambda x: len(x) > 0)
 csv["sintomas"] = csv["sintomas"].str.replace(", ", ",")
 timestamp = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
+
 csv.to_csv(f"csv/datasus_sindromegripal_{timestamp}.csv", index=False, sep=",")
 
 
 # 1
 # Qual o estado com a maior proporção de casos confirmados?
 # Gráfico de barras empilhadas
-df_estados = csv[["estado"]]
-counts = df_estados.value_counts()
+df_confirmados = csv.dropna(subset=["classificacaoFinal"])
+df_confirmados = df_confirmados[
+    df_confirmados["classificacaoFinal"].str.startswith("Confirmado")
+]
+counts = df_confirmados["estado"].value_counts()
 fig, ax = plt.subplots(figsize=(13, 18))
 
 counts.plot.bar(stacked=True, ax=ax, width=0.8, edgecolor="white", linewidth=0.5)
 
-ax.set_title("Ocorrências de Síndrome Gripal por Unidade de Federação (UF)")
+ax.set_title(
+    "Ocorrências de Síndrome Gripal por Unidade de Federação (UF)", fontsize=14
+)
 ax.set_xlabel("Unidades da Federação")
 ax.set_ylabel("Frequência de casos")
 
 for p in ax.containers:
-    ax.bar_label(p, label_type="edge", fontsize=12)
+    ax.bar_label(p, label_type="edge", fontsize=8)
 
 ax.grid(color="lightgrey", linestyle="-", linewidth=0.5)
 ax.spines["bottom"].set_color("white")
@@ -60,13 +66,19 @@ plt.savefig(f"imagens/ocorrencia_por_UF_{timestamp}.png", dpi=300)
 # receberam ao menos 1 dose de vacina?
 # Grafico de pizza, rosca ou barra
 # df_vacinados = csv[['has_numbers']]
-csv_filtrado = csv[["has_numbers", "estado"]]
-counts = csv_filtrado.groupby("estado")["has_numbers"].value_counts().unstack()
+
+csv_filtrado = csv.dropna(subset=["classificacaoFinal"])
+csv_filtrado = csv_filtrado[
+    csv_filtrado["classificacaoFinal"].str.startswith("Confirmado")
+]
+csv_filtrado = csv_filtrado[["has_numbers", "estado"]]
+counts = csv_filtrado.groupby(["estado", "has_numbers"]).size().unstack()
+
 
 ax = counts.plot.bar(figsize=(18, 16), width=0.8)
 
 for p in ax.containers:
-    ax.bar_label(p, label_type="edge", fontsize=12)
+    ax.bar_label(p, label_type="edge", fontsize=8)
 
 ax.grid(color="lightgrey", linestyle="solid", linewidth=0.5)
 ax.spines["bottom"].set_color("white")
@@ -75,11 +87,12 @@ ax.spines["right"].set_color("white")
 ax.spines["left"].set_color("white")
 
 ax.set_title(
-    "Frequência entre vacinados e não-vacinados com Síndrome Gripal, por Unidade da Federação"
+    "Frequência entre vacinados e não-vacinados com Síndrome Gripal, por Unidade da Federação",
+    fontsize=14,
 )
 ax.set_xlabel("Estado")
 ax.set_ylabel("Frequência")
-plt.legend(["Não-vacinados", "Vacinados"], loc='upper left')
+ax.legend(labels=["Não-vacinados", "Vacinados"])
 
 plt.savefig(f"imagens/ocorrencia_vacinados_por_UF_{timestamp}.png", dpi=300)
 
@@ -108,7 +121,9 @@ ax.spines["top"].set_color("white")
 ax.spines["right"].set_color("white")
 ax.spines["left"].set_color("white")
 
-ax.set_title("Frequência de Sintomáticos e Assintomáticos por Faixa Etária")
+ax.set_title(
+    "Frequência de Sintomáticos e Assintomáticos por Faixa Etária", fontsize=14
+)
 ax.set_xlabel("Contagem")
 ax.set_ylabel("Faixa Etária")
 ax.invert_xaxis()
@@ -153,7 +168,9 @@ ax = pivot_table.T.plot(kind="line", figsize=(15, 10))
 ax.legend(loc="lower center", ncol=3)
 ax.set_xlabel("Mês/Ano")
 ax.set_ylabel("Número de casos")
-ax.set_title("Evolução dos casos de síndrome gripal por Estados do Nordeste")
+ax.set_title(
+    "Evolução dos casos de síndrome gripal por Estados do Nordeste", fontsize=14
+)
 
 ax.grid(color="lightgrey", linestyle="solid", linewidth=0.5)
 ax.spines["bottom"].set_color("white")
@@ -210,7 +227,7 @@ ax.spines["top"].set_color("white")
 ax.spines["right"].set_color("white")
 ax.spines["left"].set_color("white")
 
-ax.set_title("Frequência dos sintomas em afetados por Síndrome Gripal")
+ax.set_title("Frequência dos sintomas em afetados por Síndrome Gripal", fontsize=14)
 ax.set_xlabel("Sintoma")
 ax.set_ylabel("Frequência")
 
