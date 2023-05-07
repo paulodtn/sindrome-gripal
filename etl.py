@@ -115,7 +115,7 @@ ax.set_ylabel("Faixa Etária")
 ax.invert_xaxis()
 
 
-plt.savefig(f"ocorrencia_por_idade_vacina_{timestamp}.png", dpi=300)
+plt.savefig(f"imagens/ocorrencia_por_idade_vacina_{timestamp}.png", dpi=300)
 
 # 4
 # Para (pelo menos um) estados a sua escolha, construa uma
