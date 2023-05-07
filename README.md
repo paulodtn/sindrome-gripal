@@ -22,21 +22,23 @@ Para completar esta tarefa, foram utilizadas as bibliotecas requests, json, pand
 |requests|vXXX|
 
 ## Gráfico de Número de Casos por Estado
-![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_UF_07-05-2023_14-17-01.png)
+![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_UF_07-05-2023_18-27-54.png)
 
 A partir dos dados referentes ao número de casos de síndrome gripal por estado, podemos fazer a seguinte análise:
 
-- **São Paulo** é o estado com maior número absoluto de casos, com 4382 registros, o que representa cerca de **40%** do total nacional.
-- **Rio Grande do Sul** e **Rio de Janeiro** são os estados com o segundo e terceiro maior número de casos, respectivamente, com 1021 e 874 registros cada um, o que corresponde a cerca de **9%** e **8%** do total nacional.
-- **Espírito Santo** é o estado com menor número de casos, com apenas 2 registros, o que representa menos de **0,1%** do total nacional.
-- A região **Sudeste** é a que concentra o maior número de casos, com 5897 registros, o que equivale a cerca de **54%** do total nacional.
-- A região **Norte** é a que apresenta o menor número de casos, com 349 registros, o que corresponde a cerca de **3%** do total nacional.
+
+- **São Paulo** é o estado com maior número de casos confirmados de síndrome gripal, com **301 casos**, seguido por **Goiás**, com **116 casos**, e **Santa Catarina**, com **127 casos**. Esses três estados somam **544 casos**, o que representa **64%** do total de casos no país.
+- **Alagoas** é o quarto estado com mais casos de síndrome gripal, com **101 casos**, seguido por **Rio Grande do Sul**, com **75 casos**, e **Rio de Janeiro**, com **36 casos**. Esses três estados somam **212 casos**, o que representa **25%** do total de casos no país.
+- **Minas Gerais** é o sétimo estado com mais casos de síndrome gripal, com **31 casos**, seguido por **Pará**, com **12 casos**, e **Rondônia**, com **10 casos**. Esses três estados somam **53 casos**, o que representa **6%** do total de casos no país.
+- **Ceará** é o décimo estado com mais casos de síndrome gripal, com **6 casos**, seguido por **Bahia**, com **3 casos**, e **Mato Grosso do Sul** e **Amapá**, com **2 e 1 caso** respectivamente. Esses quatro estados somam **12 casos**, o que representa **1%** do total de casos no país.
+- **Distrito Federal** é o estado com menos casos de síndrome gripal confirmados, com apenas **1 caso**.
+
 
 Esses dados podem refletir diferentes fatores, como a densidade populacional, o clima, a circulação de vírus, as medidas de prevenção e controle, entre outros.
 
 ## Gráfico de Casos em que o Paciente Tomou ao menos 1 Dose da Vacina
 
-![questao2](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_vacinados_por_UF_07-05-2023_14-17-01.png)
+![questao2](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_vacinados_por_UF_07-05-2023_18-27-54.png)
 
 Os dados mostram que, dos 10000 casos de síndrome gripal registrados, **6699 (66,99%)** tomaram ao menos uma dose de vacina (**vacinados**), enquanto **3301 (33,01%)** não tomaram nenhuma dose (**não vacinados**). Isso significa que a maioria dos casos ocorreu em pessoas que se vacinaram parcial ou totalmente. Isso pode indicar que:
 
@@ -50,7 +52,7 @@ Para confirmar essas hipóteses, seria necessário realizar mais estudos e anál
 
 ## Gráfico de Pacientes Sintomáticos e Assintomáticos por Faixa Etária
 
-![questao3](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_idade_vacina_07-05-2023_14-17-01.png)
+![questao3](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_idade_vacina_07-05-2023_18-27-54.png)
 
 Uma possível análise dos dados referentes ao número de casos de síndrome gripal é a seguinte:
 
@@ -63,14 +65,14 @@ Uma possível análise dos dados referentes ao número de casos de síndrome gri
 
 Aqui pode-se visualizar a frequência de casos por tempo nos estados do Nordeste: Alagoas, Sergipe, Maranhão, Bahia, Pernambuco, Ceará, Piauí, Paraíba, Rio Grande do Norte.
 
-![questao4](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/evolucao_ne_07-05-2023_14-17-01.png)
+![questao4](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/evolucao_ne_07-05-2023_18-27-54.png)
 
 
 ## Gráfico da Frequência de Sintomas por Paciente
 
 De acordo com o gráfico, o sintoma mais frequente entre os pacientes com síndrome gripal é a tosse, com 5130 casos, seguido por coriza, com 3838 casos. O sintoma menos frequente é a alteração do olfato, com 289 casos. O gráfico também mostra que 2144 pacientes não apresentaram nenhum sintoma, ou seja, foram assintomáticos.
 
-![questao5](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/frequencia_sintomas_07-05-2023_14-17-01.png)
+![questao5](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/frequencia_sintomas_07-05-2023_18-27-54.png)
 
 ## Conclusões
 
