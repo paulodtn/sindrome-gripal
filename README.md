@@ -12,8 +12,6 @@ visualização para acompanhar a evolução dos casos ao longo do
 período amostrado.
 ● Entre os pacientes sintomáticos, qual o sintoma mais frequente?
 
-![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/evolucao_ne_07-05-2023_13-27-05.png)
-
 ## Metodologia
 
 Para completar esta tarefa, foram utilizadas as bibliotecas requests, json, pandas, XXX, YYYY, ZZZ nas seguintes versões
@@ -34,6 +32,8 @@ A partir dos dados referentes ao número de casos de síndrome gripal por estado
 - A região **Norte** é a que apresenta o menor número de casos, com 349 registros, o que corresponde a cerca de **3%** do total nacional.
 
 Esses dados podem refletir diferentes fatores, como a densidade populacional, o clima, a circulação de vírus, as medidas de prevenção e controle, entre outros.
+
+![questao1](https://github.com/paulodtn/sindrome-gripal/blob/main/imagens/ocorrencia_por_UF_07-05-2023_13-27-05.png)
 
 ## Gráfico de Casos em que o Paciente Tomou ao menos 1 Dose da Vacina
 

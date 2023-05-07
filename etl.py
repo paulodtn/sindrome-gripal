@@ -99,7 +99,7 @@ faixas_etarias = pd.cut(
 
 counts = pd.crosstab(faixas_etarias, df_sintomas["sintomatico"])
 
-ax = counts.plot.barh(width=0.8, figsize=(10, 15))
+ax = counts.plot.barh(width=0.8, figsize=(7, 12))
 for i in ax.containers:
     ax.bar_label(i, label_type="edge", fontsize=10)
 
