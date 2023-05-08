@@ -28,6 +28,7 @@ csv["sintomas"] = csv["sintomas"].str.replace(", ", ",")
 timestamp = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
 
+
 csv.to_csv(f"csv/datasus_sindromegripal_{timestamp}.csv", index=False, sep=",")
 
 
@@ -65,7 +66,7 @@ plt.savefig(f"imagens/ocorrencia_por_UF_{timestamp}.png", dpi=300)
 # Dentre os casos confirmados, qual a proporção de pacientes que
 # receberam ao menos 1 dose de vacina?
 # Grafico de pizza, rosca ou barra
-# df_vacinados = csv[['has_numbers']]
+
 
 csv_filtrado = csv.dropna(subset=["classificacaoFinal"])
 csv_filtrado = csv_filtrado[
@@ -73,7 +74,6 @@ csv_filtrado = csv_filtrado[
 ]
 csv_filtrado = csv_filtrado[["has_numbers", "estado"]]
 counts = csv_filtrado.groupby(["estado", "has_numbers"]).size().unstack()
-
 
 ax = counts.plot.bar(figsize=(18, 16), width=0.8)
 
@@ -92,9 +92,10 @@ ax.set_title(
 )
 ax.set_xlabel("Estado")
 ax.set_ylabel("Frequência")
-ax.legend(labels=["Não-vacinados", "Vacinados"])
+ax.legend(labels=["Não-vacinados", "Vacinados"], loc="upper left")
 
 plt.savefig(f"imagens/ocorrencia_vacinados_por_UF_{timestamp}.png", dpi=300)
+
 
 # 3
 # Como é a distribuição de idade entre pacientes sintomáticos e

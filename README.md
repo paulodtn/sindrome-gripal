@@ -1,25 +1,28 @@
-# Tratamento de dados de Síndrome Gripal
+# Análise de dados sobre Síndrome Gripal no Brasil
 
-Este repositório visa tratar os dados sobre Síndrome Gripal presentes na API do [OpenSUS](https://opendatasus.saude.gov.br) de forma a responder os seguintes questionamentos:
- 
-* Qual o estado com a maior proporção de casos confirmados?
-* Dentre os casos confirmados, qual a proporção de pacientes que
-receberam ao menos 1 dose de vacina?
-* Como é a distribuição de idade entre pacientes sintomáticos e
-assintomáticos entre os casos confirmados?
-* Para (pelo menos um) estados a sua escolha, construa uma
-visualização para acompanhar a evolução dos casos ao longo do
-período amostrado.
-● Entre os pacientes sintomáticos, qual o sintoma mais frequente?
+Neste repositório, vamos analisar os dados sobre Síndrome Gripal presentes na API do [OpenSUS](https://opendatasus.saude.gov.br/dataset/bd-srag-2021), de forma a responder os seguintes questionamentos:
+
+- Qual o estado com a maior proporção de casos confirmados?
+- Dentre os casos confirmados, qual a proporção de pacientes que receberam ao menos 1 dose de vacina?
+- Como é a distribuição de idade entre pacientes sintomáticos e assintomáticos entre os casos confirmados?
+- Para (pelo menos um) estados a sua escolha, construa uma visualização para acompanhar a evolução dos casos ao longo do período amostrado.
+- Entre os pacientes sintomáticos, qual o sintoma mais frequente?
 
 ## Metodologia
 
-Para completar esta tarefa, foram utilizadas as bibliotecas requests, json, pandas, XXX, YYYY, ZZZ nas seguintes versões
+Para completar esta tarefa, foram utilizadas as seguintes ferramentas e bibliotecas:
 
-|library|version|
-|---|---|
-|pandas|vXXX|
-|requests|vXXX|
+- [Postman](https://www.postman.com/downloads/) 
+- [Python 3](https://www.python.org/downloads/) 
+  - [requests](https://docs.python-requests.org/en/latest/) - Versão 2.26.0
+  - [json](https://docs.python.org/3/library/json.html) - Faz parte do Python desde a versão 2.6;
+  - [pandas](https://pandas.pydata.org/) - Versão 1.4.1 
+  - [plotly.express](https://plotly.com/python/plotly-express/) - Versão 5.4.0 
+  - [matplotlib.pyplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html) - Versão 3.5.1
+  - [datetime](https://docs.python.org/3/library/datetime.html) - Faz parte do Python desde a versão 2.6;
+  - [plotly.graph_objects](https://plotly.com/python/graph-objects/) - Versão 5.4.0 
+  - [pathlib.Path](https://docs.python.org/3/library/pathlib.html) - Versão 3.6.0
+
 
 ## Gráfico de Número de Casos por Estado
 
